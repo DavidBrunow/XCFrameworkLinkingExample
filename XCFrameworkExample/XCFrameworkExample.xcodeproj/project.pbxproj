@@ -18,6 +18,7 @@
 		116999D523E4E00C008C502F /* CoconutLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 116999D323E4E00C008C502F /* CoconutLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		116999D723E4E015008C502F /* CoconutLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116999D323E4E00C008C502F /* CoconutLib.xcframework */; };
 		116999D823E4E015008C502F /* CoconutLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 116999D323E4E00C008C502F /* CoconutLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		116999DD23E4E063008C502F /* ExampleStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116999DC23E4E063008C502F /* ExampleStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		116999CC23E4DF8D008C502F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		116999CE23E4DF8D008C502F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		116999D323E4E00C008C502F /* CoconutLib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CoconutLib.xcframework; path = ../CoconutLib.xcframework; sourceTree = "<group>"; };
+		116999DC23E4E063008C502F /* ExampleStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				116999B223E4DF04008C502F /* XCFrameworkExample.h */,
 				116999B323E4DF04008C502F /* Info.plist */,
+				116999DC23E4E063008C502F /* ExampleStruct.swift */,
 			);
 			path = XCFrameworkExample;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				TargetAttributes = {
 					116999AE23E4DF04008C502F = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					116999BD23E4DF8B008C502F = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -254,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116999DD23E4E063008C502F /* ExampleStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +425,7 @@
 		116999B823E4DF04008C502F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -435,6 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.XCFrameworkExample;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,6 +450,7 @@
 		116999B923E4DF04008C502F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
